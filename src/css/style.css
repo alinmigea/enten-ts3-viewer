@@ -1,0 +1,15 @@
+/* ADD SYTLE INFORMATION */
+
+.error {
+    font-size: 1.2em;
+    color: red;
+    border: 1px solid red;
+    background-color: #F5A9A9;
+}
+
+.info {
+    font-size: 1.2em;
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+}
