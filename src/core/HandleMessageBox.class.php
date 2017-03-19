@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * @class HandleMessageBox
  *
@@ -14,13 +13,20 @@ class HandleMessageBox
 	/**
 	 * Converts the exception code into a readable message.
 	 *
-	 * @param int $code
+	 * @param Exception $exception
 	 * @return array
 	 */
-	public static function getPredefinedMessage(int $code):array
+	public static function getPredefinedMessage(Exception $exception):array
 	{
-		switch($code)
+		switch($exception->getCode())
 		{
+			case 0:
+			default:
+				return [
+					'type'	  => self::DISPLAY_TYPE_ERROR,
+					'message' => $exception->getMessage()
+				];
+
 			case 1:
 				return [
 					'type'	  => self::DISPLAY_TYPE_ERROR,
@@ -38,11 +44,7 @@ class HandleMessageBox
 					'message' => 'Konfigurationsdaten konnten nicht geladen werden.'
 				];
 
-			default:
-				return [
-					'type'	  => self::DISPLAY_TYPE_ERROR,
-					'message' => 'Ein unbekannter Fehler ist aufgetreten.'
-				];
+
 		}
 	}
 

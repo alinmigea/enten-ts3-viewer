@@ -1,0 +1,300 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    font-size: 14px;
+}
+body {
+    height:100%;
+    background-color: #900;
+    background-image:url(../img/bg-02.jpg);
+    background-position: top center;
+    background-attachment: fixed;
+    color: #e3dfdf;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+#wrapper{
+    margin: 0 auto 0 auto;
+    width: 1000px;
+    background: url(../img/header.png) top left 8px no-repeat, url(../img/bg-fahne.png) top left 61px no-repeat;
+    display: block;
+}
+#header{
+    width: 1000px;
+    height: 300px;
+}
+#navi{
+    margin: 36px 0px 0px 0px;
+    width: 272px;
+    height: 244px;
+    text-align: center;
+    color: #000;
+    background-image: url(../img/bg-navi.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: right;
+}
+#navi h2{
+    margin: 30px 0px 50px 0px;
+    font-size: 1.1rem;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    color: #c10d0d;
+    background: -moz-linear-gradient(left, rgba(227,223,223,0) 0%, rgba(227,223,223,0) 2%, rgba(227,223,223,1) 30%, rgba(227,223,223,1) 50%, rgba(227,223,223,1) 70%, rgba(227,223,223,0) 98%, rgba(227,223,223,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(227,223,223,0) 0%,rgba(227,223,223,0) 2%,rgba(227,223,223,1) 30%,rgba(227,223,223,1) 50%,rgba(227,223,223,1) 70%,rgba(227,223,223,0) 98%,rgba(227,223,223,0) 100%);
+    background: linear-gradient(to right, rgba(227,223,223,0) 0%,rgba(227,223,223,0) 2%,rgba(227,223,223,1) 30%,rgba(227,223,223,1) 50%,rgba(227,223,223,1) 70%,rgba(227,223,223,0) 98%,rgba(227,223,223,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00e3dfdf', endColorstr='#00e3dfdf',GradientType=1 );
+}
+#navi span{
+    margin-top: -17px;
+    display: block;
+}
+#navi a.bt-entenclan{
+    margin: 0px auto 0px auto;
+    width: 255px;
+    height: 77px;
+    background-image: url(../img/bt-navi-sprite.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    display: block;
+}
+#navi a.bt-entenclan:hover{
+    background-position: left top -100px;
+}
+#navi a.bt-entenboard{
+    margin: -6px auto 0px auto;
+    width: 255px;
+    height: 77px;
+    background-image: url(../img/bt-navi-sprite.png);
+    background-position: left top -200px;
+    background-repeat: no-repeat;
+    display: block;
+}
+#navi a.bt-entenboard:hover{
+    background-position: left top -300px;
+}
+#ts-viewer{
+    margin: -80px 20px 0px 0px;
+    width: 460px;
+    float: left;
+}
+#ts-viewer table{
+    width: 460px;
+    /*background: rgb(63,76,107);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(63,76,107,1) 0%, rgba(10,8,20,1) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(63,76,107,1) 0%,rgba(10,8,20,1) 100%);
+    background: radial-gradient(ellipse at center, rgba(63,76,107,1) 0%,rgba(10,8,20,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#0a0814',GradientType=1 );*/
+    box-shadow: inset 0px 0px 142px #000;
+    border-collapse: separate;
+    border-spacing: 0 1px;
+    border-radius: 12px;
+    border: 7px ridge #456575;
+
+}
+#ts-viewer table tr{
+    margin-top: 1px;
+    float: left;
+}
+#ts-viewer table tr.ts-header td{
+    margin: 0px 0px 2px 0px;
+    padding: 12px 0px 16px 0px;
+    width: 460px;
+    background-color:rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-bottom: 1px solid #c2c2c2;
+}
+#ts-viewer table tr.ts-header td h2{
+    margin: 0px 0px 1px 0px;
+    font-size: 1.3rem;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+#ts-viewer table tr.ts-header td p.ts-message{
+    margin: 20px auto 8px auto;
+    padding: 0px;
+    width: 280px;
+}
+#ts-viewer table tbody tr.channel td{
+    padding: 1px 0px 1px 10px;
+    width: 340px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+#ts-viewer table tbody tr.subchannel{
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.32) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.32) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.32) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#52000000', endColorstr='#00000000',GradientType=1 );
+}
+#ts-viewer table tbody tr.subchannel td{
+    padding: 2px 0px 0px 18px;
+    width: 340px;
+    font-weight: bold;
+}
+#ts-viewer table tbody tr.client{
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+}
+
+#ts-viewer table tbody tr.client td.status{
+    padding: 1px 0px 0px 17px;
+    width: 33px;
+}
+#ts-viewer table tbody tr.client td.status img{
+    margin: 2px 0px 0px 0px;
+    width: 13px;
+    height: 13px;
+}
+#ts-viewer table tbody tr.client td.user{
+    padding: 1px 0px 1px 3px;
+    width: 307px;
+}
+#ts-viewer table tbody tr td.icon{
+    padding: 0px 4px 0px 0px;
+    width: 120px;
+}
+#ts-viewer table tbody tr td.icon img{
+    margin: 2px 2px 0px 0px;
+    width: 16px;
+    height: 16px;
+    float: right;
+}
+
+
+
+.server{
+    padding: 12px 0px 26px 0px;
+    width: 520px;
+    box-shadow: inset 0px 0px 142px #000;
+    text-align: center;
+    float: left;
+}
+.server h2{
+    margin: 12px 0px 0px 0px;
+    font-size: 1.3rem;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+.server p{
+    margin: 12px 34px 12px 34px;
+    text-align: center;
+}
+.conan{
+    margin: 20px 0px 0px 14px;
+    width: 266px;
+    background-image: url(../img/bg-conan.png);
+    background-repeat:no-repeat;
+    text-align: center;
+    float: left;
+}
+.server div.conan h3{
+    margin: 92px 0px 0px 0px;
+    font-size: 1.2rem;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+    color: #000;
+}
+.conan iframe{
+    margin-top: -3px;
+    border-radius: 12px;
+}
+.quake{
+    margin-top: 20px;
+    width: 240px;
+    background-image: url(../img/bg-quake.png);
+    background-repeat:no-repeat;
+    text-align: center;
+    float: left;
+}
+.server div.quake h3{
+    margin: 88px 0px 10px 0px;
+    font-size: 1.1rem;
+    font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+.ts-icons{
+    width: 244px;
+    height: 300px;
+    background-color:#060;
+    float: left;
+}
+.sweeper{
+    clear: both;
+    margin: 0;
+    padding: 0;
+    width: 0px;
+    height: 0px;
+}
+a, a:visited{
+    color: #fc9c04;
+    text-decoration: none;
+}
+a:hover {color: #ff6600;}
+strong {
+    font-family: 'Ubuntu', arial, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1000px) {
+    #wrapper{
+        margin: 0px auto;
+        width: 760px;
+        background-position: 11% 0px;
+    }
+    #header{
+        padding-top: 241px;
+        width: 760px;
+        height: 520px;
+    }
+    #ts-viewer{
+        margin-top: -302px;
+    }
+    .server{
+        width: 280px;
+    }
+    .conan{
+        margin: 0px 7px 0px 7px;
+    }
+    .quake{
+        margin: 12px 20px 0px 20px;
+    }
+}
+@media screen and (max-width: 760px) {
+    #wrapper{
+        margin: 0px auto 0px auto;
+        width: 400px;
+        background: url(../img/bg-fahne.png) top left 0px no-repeat;
+    }
+    #header{
+        padding-top: 0px;
+        width: 100%;
+        height: 260px;
+    }
+    #navi{
+        margin: 4px 0px 0px 0px;
+    }
+    #ts-viewer{
+        margin: 0px;
+    }
+    #ts-viewer, #ts-viewer table, #ts-viewer table tr.ts-header td{
+        width: 400px;
+    }
+    #ts-viewer table tbody tr.channel td, #ts-viewer table tbody tr.subchannel td{
+        width: 280px;
+    }
+    #ts-viewer table tbody tr.client td.user{
+        width: 247px;
+    }
+    .server{
+        margin: 12px 50px 12px 50px;
+        width: 300px;
+    }
+    .conan{
+        margin: 0px 17px 0px 17px;
+    }
+    .quake{
+        margin: 12px 30px 0px 30px;
+    }
+}

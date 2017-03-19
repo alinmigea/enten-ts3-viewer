@@ -1,5 +1,7 @@
 <?php
 
+require_once 'core/HandleMessageBox.class.php';
+
 /*
  * @author desentyer
  *
@@ -7,14 +9,12 @@
  * It starts the client and calls all user data. Use the variable $server to your modules.
  */
 
-require_once '../core/HandleMessageBox.class.php';
-
 try
 {
 	$message = [];
-	include_once 'runClient.php';
+	include_once 'RunClient.php';
 }
 catch(Exception $exception)
 {
-	$message = HandleMessageBox::getPredefinedMessage($exception->getCode());
+	$message = HandleMessageBox::getPredefinedMessage($exception);
 }

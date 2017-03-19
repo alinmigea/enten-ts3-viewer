@@ -39,20 +39,23 @@ class TsConfig
 
 	public function __construct()
 	{
-		if(!file_exists('../config.php'))
+		if(!file_exists('config.php'))
 		{
-			throw new ServerViewerException(3);
+			throw new ServerViewerException('Config file not found.');
 		}
 
-		include '../config.php';
+		include 'config.php';
 
+		/**
+		 * @var array $config
+		 */
 		if(array_key_exists('teamspeak', $config))
 		{
-			$this->serverIp = 		 $config['teamspeak']['serverIp'];
-			$this->serverPort = 	 $config['teamspeak']['serverPort'];
-			$this->serverQueryPort = $config['teamspeak']['serverQueryPort'];
-			$this->adminUsername = 	 $config['teamspeak']['adminUsername'];
-			$this->adminPassword = 	 $config['teamspeak']['adminPassword'];
+			$this->serverIp = 		 	$config['teamspeak']['serverIp'];
+			$this->serverPort = 	 	$config['teamspeak']['serverPort'];
+			$this->serverQueryPort = 	$config['teamspeak']['serverQueryPort'];
+			$this->adminUsername = 	 	$config['teamspeak']['adminUsername'];
+			$this->adminPassword = 	 	$config['teamspeak']['adminPassword'];
 		}
 	}
 
